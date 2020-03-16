@@ -17,7 +17,7 @@
     }
 
     .tab-line[selected] {
-        background-color: #FF2D55 !important;
+        background-color: transparent !important;
     }
 
     .tab-line:not([selected="true"]) {
@@ -34,12 +34,12 @@
         border-width: 0px !important;
     }
 
-    #back-button >  .toolbarbutton-icon {
+    /* #back-button >  .toolbarbutton-icon {
         background: none !important;
         color: rgba(0, 0, 0, 0.9) !important;
         background-color: rgba(255, 255, 255, 0.5) !important;
         border-color: transparent !important;
-    }
+    } */
 
     #TabsToolbar .tab-background:not([selected]) {
         background-color: rgba(0, 0, 0, 0.05) !important;
@@ -78,12 +78,12 @@
         border-width: 0px !important;
     }
 
-    #back-button >  .toolbarbutton-icon {
+    /* #back-button >  .toolbarbutton-icon {
         background: none !important;
         color: rgba(255, 255, 255, 0.9) !important;
         background-color: rgba(0, 0, 0, 0.5) !important;
         border-color: transparent !important;
-    }
+    } */
 
     #TabsToolbar .tab-background:not([selected]) {
         background-color: rgba(255, 255, 255, 0.05) !important;
@@ -115,7 +115,7 @@
 }
 
 /* Hide Hamburger */
-#PanelUI-menu-button:before {
+/* #PanelUI-menu-button:before {
     display: none;
     border-inline-width: 0px !important;
 }
@@ -126,7 +126,7 @@
 
 #PanelUI-button {
     display: none;
-}
+} */
 
 /* Hide Tracking Prot */
 #tracking-protection-icon-box {
@@ -139,13 +139,8 @@
     border-inline-width: 0px !important;
 }
 
-/* No Bookmark Star */
-.urlbarView-row[type="bookmark"] .urlbarView-type-icon {
-    display: none !important;
-}
-
-/* Hide Page Action Button */
-#page-action-buttons {
+/* No Pocket, Bookmark Star */
+#pocket-button-box, #star-button-box, #reader-mode-button {
     display: none !important;
 }
 
@@ -229,22 +224,27 @@ toolbox#navigator-toolbox > toolbar#nav-bar.browser-toolbar{ animation: none; }
 
 /* Tabbar upper margin */
 #TabsToolbar {
-    margin-top: -6px !important;
+    /* margin-top: -6px !important; */
 }
 
 /* Navbar upper margin */
 
 #nav-bar {
-    margin-top: 6px !important;
+    margin-top: 2px !important;
+    min-height: 36px !important;
 }
 
 /* Move traffic lights down */
-.titlebar-buttonbox-container{
-    margin-top: 6px !important;
+.titlebar-buttonbox-container {
+    margin-top: 12px !important;
+    height: 24px !important;
+}
+
+#TabsToolbar-customization-target {
+  border-top: 1px solid rgba(0,0,0, 0.2);
 }
 
 /* Full Tab Width */
-
 .tabbrowser-tab[fadein]:not([pinned]) {
   max-width: none !important;
 }
@@ -261,9 +261,9 @@ toolbox#navigator-toolbox > toolbar#nav-bar.browser-toolbar{ animation: none; }
 }
 
 /* Margin Nav Overflow */
-#nav-bar-overflow-button {
+/* #nav-bar-overflow-button {
     margin-right: 10px !important;
-}
+} */
 
 /* Lower Tab Line */
 .tab-background{
