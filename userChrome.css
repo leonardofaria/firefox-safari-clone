@@ -1,0 +1,324 @@
+@media (prefers-color-scheme: light) {
+
+    #TabsToolbar,#nav-bar,#PersonalToolbar,.theme-dark,.theme-light,slider,.CodeMirror,.devtools-toolbar,.message,.theme-body,.table-widget-empty-text,.titlebar-buttonbox-container,#navigator-toolbox,.tab-background[selected] {
+       -moz-appearance: -moz-mac-vibrancy-light !important;
+    }
+
+    .tabbrowser-tab:not([selected="true"]) :-moz-window-inactive > .tab-label-container {
+           color: rgba(0, 0, 0, 1.0);
+    }
+
+    #TabsToolbar .tabbrowser-tab:not([selected="true"]) {
+           color: rgba(0, 0, 0, 0.9) !important;
+    }
+
+    #TabsToolbar{
+        --lwt-toolbarbutton-icon-fill: rgba(0, 0, 0, 0.9)
+    }
+
+    .tab-line[selected] {
+        background-color: #FF2D55 !important;
+    }
+
+    .tab-line:not([selected="true"]) {
+        background-color: rgba(0, 0, 0, 0.5) !important;
+    }
+
+    #TabsToolbar{
+        --lwt-background-tab-separator-color: rgba(0, 0, 0, 0.5)
+    }
+
+    #urlbar {
+        background-color: rgba(255, 255, 255, 0.5) !important;
+        border-radius: 5px !important;
+        border-width: 0px !important;
+    }
+
+    #back-button >  .toolbarbutton-icon {
+        background: none !important;
+        color: rgba(0, 0, 0, 0.9) !important;
+        background-color: rgba(255, 255, 255, 0.5) !important;
+        border-color: transparent !important;
+    }
+
+    #TabsToolbar .tab-background:not([selected]) {
+        background-color: rgba(0, 0, 0, 0.05) !important;
+        border-radius: 0px !important;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    #TabsToolbar,#nav-bar,#PersonalToolbar,.theme-dark,.theme-light,slider,.CodeMirror,.devtools-toolbar,.message,.theme-body,.table-widget-empty-text,.titlebar-buttonbox-container,#navigator-toolbox,.tab-background[selected] {
+       -moz-appearance: -moz-mac-vibrancy-dark !important;
+    }
+
+    .tab-line[selected] {
+        background-color: #FF375F !important;
+    }
+
+    .tab-line:not([selected="true"]) {
+        background-color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    .tabbrowser-tab:not([selected="true"]) :-moz-window-inactive > .tab-label-container {
+           color: rgba(255, 255, 255, 1.0);
+    }
+
+    #TabsToolbar .tabbrowser-tab:not([selected="true"]) {
+           color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    #TabsToolbar{
+        --lwt-toolbarbutton-icon-fill: rgba(255, 255, 255, 0.9)
+    }
+
+    #urlbar {
+        background-color: rgba(0, 0, 0, 0.5) !important;
+        border-radius: 5px !important;
+        border-width: 0px !important;
+    }
+
+    #back-button >  .toolbarbutton-icon {
+        background: none !important;
+        color: rgba(255, 255, 255, 0.9) !important;
+        background-color: rgba(0, 0, 0, 0.5) !important;
+        border-color: transparent !important;
+    }
+
+    #TabsToolbar .tab-background:not([selected]) {
+        background-color: rgba(255, 255, 255, 0.05) !important;
+        border-radius: 0px !important;
+    }
+}
+
+.theme-body {
+   background: transparent !important;
+}
+
+/* Hide Tab Close Button */
+
+.tabbrowser-tab:not(:hover) .tab-close-button{
+    display:none;
+}
+
+.tabbrowser-tab:not([pinned]):hover .tab-close-button{
+    display:none !important;
+}
+
+.tabbrowser-tab:not([pinned]):hover  .tab-icon-image {
+    display: none !important;
+}
+
+#PlacesToolbarItems .bookmark-item {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+}
+
+/* Hide Hamburger */
+#PanelUI-menu-button:before {
+    display: none;
+    border-inline-width: 0px !important;
+}
+
+#PanelUI-menu-button {
+    display: none;
+}
+
+#PanelUI-button {
+    display: none;
+}
+
+/* Hide Tracking Prot */
+#tracking-protection-icon-box {
+    display: none;
+    border-color: transparent !important;
+}
+
+#tracking-protection-icon-container,#pageActionSeparator {
+    display: none;
+    border-inline-width: 0px !important;
+}
+
+/* No Bookmark Star */
+.urlbarView-row[type="bookmark"] .urlbarView-type-icon {
+    display: none !important;
+}
+
+/* Hide Page Action Button */
+#page-action-buttons {
+    display: none !important;
+}
+
+/* Make urlbar megabar appear more compact */
+/* Set the pref browser.urlbar.megabar to true */
+#urlbar.megabar[breakout]{
+  margin-inline-start: 0px !important;
+  width: 100% !important;
+  left: 0 !important;
+  top: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
+}
+#urlbar.megabar[breakout]:not([open]){ bottom: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important; }
+.urlbarView.megabar{ margin-inline: 0 !important; width: auto !important; }
+.urlbarView-row{ padding-inline: 4px !important; }
+#urlbar-background{ animation: none !important; }
+#urlbar-input-container{ padding: 0 !important; height: 100% !important; }
+
+/* Center URLBar */
+#urlbar-container {
+   -moz-box-pack: center !important;
+}
+
+/* Center URLBar Text */
+#urlbar:not([focused]) .urlbar-input-box {
+    text-align: center;
+}
+
+/* Center Bookmarks */
+#PlacesToolbarItems{
+    -moz-box-pack: center
+}
+
+/* Lower Tabs */
+:root{
+  --uc-titlebar-padding: 0px; }
+:root[sizemode="maximized"][tabsintitlebar]{ --uc-titlebar-padding: 0px }
+
+.titlebar-buttonbox-container{
+  position: fixed;
+  display: block;
+  top: var(--uc-titlebar-padding,0px);
+  right:0;
+  height: 40px;
+}
+/* Mac specific. You should set that font-smoothing pref to true if you are on any platform where window controls are on left */
+@supports -moz-bool-pref("layout.css.osx-font-smoothing.enabled"){
+	:root{ --uc-titlebar-padding: 0px !important }
+	.titlebar-buttonbox-container{ left:0; right: unset; }
+}
+
+:root[uidensity="compact"] .titlebar-buttonbox-container{ height: 32px }
+
+#toolbar-menubar[inactive] > .titlebar-buttonbox-container{ opacity: 0 }
+
+#navigator-toolbox{ padding-top: var(--uc-titlebar-padding,0px) !important; }
+
+
+.titlebar-buttonbox-container > .titlebar-buttonbox{ height: 100%; }
+
+#titlebar{
+ -moz-box-ordinal-group: 2;
+  -moz-appearance: none !important;
+}
+
+.titlebar-placeholder,
+#TabsToolbar .titlebar-spacer{ display: none; }
+/* Also hide the toolbox bottom border which isn't at bottom with this setup */
+#navigator-toolbox::after{ display: none !important; }
+
+@media (-moz-gtk-csd-close-button){ .titlebar-button{ -moz-box-orient: vertical } }
+
+/* These exist only for compatibility with autohide-tabstoolbar.css */
+toolbox#navigator-toolbox > toolbar#nav-bar.browser-toolbar{ animation: none; }
+#navigator-toolbox:hover #TabsToolbar{ animation: slidein ease-out 48ms 1 }
+
+/* Move Back/Forward */
+
+#back-button .toolbarbutton-icon {
+	margin-left: 80px !important;
+}
+
+/* Tabbar upper margin */
+#TabsToolbar {
+    margin-top: -6px !important;
+}
+
+/* Navbar upper margin */
+
+#nav-bar {
+    margin-top: 6px !important;
+}
+
+/* Move traffic lights down */
+.titlebar-buttonbox-container{
+    margin-top: 6px !important;
+}
+
+/* Full Tab Width */
+
+.tabbrowser-tab[fadein]:not([pinned]) {
+  max-width: none !important;
+}
+
+/* Center Tab Text */
+.tab-text {
+    -moz-box-flex: 1 !important;
+    text-align: center !important;
+}
+
+/* Remove Images Non Pinned Tabs*/
+.tab-icon-image:not([pinned]) {
+    display: none !important;
+}
+
+/* Margin Nav Overflow */
+#nav-bar-overflow-button {
+    margin-right: 10px !important;
+}
+
+/* Lower Tab Line */
+.tab-background{
+    -moz-box-direction: reverse
+}
+
+/* tab border */
+.tabbrowser-tab[selected] {
+    border-image-width: 0 !important;
+}
+
+.tab-background[selected] {
+    border-top-width: 0 !important;
+    border-top-style: none !important;
+}
+
+.tabbrowser-tab[selected]::before,
+.tabbrowser-tab[selected]::after{
+    display: none !important;
+}
+
+.tabbrowser-tab:not([selected])::before,
+.tabbrowser-tab:not([selected])::after{
+    margin-bottom: 0px !important;
+    margin-top: 1px !important;
+}
+
+
+/* List Tab Button Remove */
+#alltabs-button {
+  display: none !important;
+}
+
+/* Hide Dropdown icon URL BAR */
+.urlbar-history-dropmarker {
+    display: none !important;
+}
+
+/* change minimum tab width */
+.tabbrowser-tab:not([pinned]) {
+    min-width: 100px !important;
+}
+
+/* Hide New Tab Button */
+#tabs-newtab-button, #new-tab-button {
+    display: none !important;
+}
+
+/* Tab Line Span */
+.tab-line[selected] {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+/* Hide last tab separator at end */
+.tabbrowser-tab[last-visible-tab]::after {
+    display: none !important;
+}
